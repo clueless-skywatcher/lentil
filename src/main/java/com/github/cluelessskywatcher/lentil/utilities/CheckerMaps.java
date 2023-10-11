@@ -15,6 +15,7 @@ public class CheckerMaps {
 
         // Naming convention checks
         CHECKERS_FROM_CODE.put("N0001", "com.github.cluelessskywatcher.lentil.checks.conventions.ConstantNameChecker");
+        CHECKERS_FROM_CODE.put("N0002", "com.github.cluelessskywatcher.lentil.checks.conventions.UnderscoreNameChecker");
     }
 
     static {
@@ -26,5 +27,6 @@ public class CheckerMaps {
 
         // Naming convention checks
         CHECKERS_FROM_NAME.put("ConstantName", "com.github.cluelessskywatcher.lentil.checks.conventions.ConstantNameChecker");
+        CHECKERS_FROM_NAME.put("UnderscoreName", "com.github.cluelessskywatcher.lentil.checks.conventions.UnderscoreNameChecker");
     }
 }
