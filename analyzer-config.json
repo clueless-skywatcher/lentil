@@ -2,13 +2,7 @@
     "analyzer": {
         "checks": [
             {
-                "name": "LineLength"
-            },
-            {
-                "name": "AsteriskImport"
-            },
-            {
-                "name": "ConstantName"
+                "name": "UnderscoreName"
             }
         ]
     }
