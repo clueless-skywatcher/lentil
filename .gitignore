@@ -24,3 +24,10 @@ hs_err_pid*
 replay_pid*
 
 target/
+.vscode/
+.idea/
+.settings/
+bin/
+
+.classpath
+.project
