@@ -3,6 +3,12 @@
         "checks": [
             {
                 "name": "UnderscoreName"
+            },
+            {
+                "name": "AsteriskImport"
+            },
+            {
+                "name": "LineLength"
             }
         ]
     }
