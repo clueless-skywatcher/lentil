@@ -31,3 +31,5 @@ bin/
 
 .classpath
 .project
+
+analyzer-config.json

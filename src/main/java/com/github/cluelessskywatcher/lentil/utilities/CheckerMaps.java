@@ -7,6 +7,9 @@ public class CheckerMaps {
     public static final Map<String, String> CHECKERS_FROM_CODE = new HashMap<>();
     public static final Map<String, String> CHECKERS_FROM_NAME = new HashMap<>();
     static {
+        // Annotation checks
+        CHECKERS_FROM_CODE.put("A0001", "com.github.cluelessskywatcher.lentil.checks.annotations.AnnotationsOnSameLineChecker");
+
         // Code checks
         CHECKERS_FROM_CODE.put("C0001", "com.github.cluelessskywatcher.lentil.checks.code.LineLengthChecker");
 
@@ -19,6 +22,9 @@ public class CheckerMaps {
     }
 
     static {
+        // Annotation checks
+        CHECKERS_FROM_NAME.put("AnnotationsOnSameLine", "com.github.cluelessskywatcher.lentil.checks.annotations.AnnotationsOnSameLineChecker");
+
         // Code checks
         CHECKERS_FROM_NAME.put("LineLength", "com.github.cluelessskywatcher.lentil.checks.code.LineLengthChecker");
 
