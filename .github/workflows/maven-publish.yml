@@ -34,7 +34,7 @@ jobs:
     - uses: marvinpinto/action-automatic-releases@latest
       with:
         repo_token: "${{ secrets.LENTIL_REPO_TOKEN }}"
-        automatic_release_tag: "$v-1.0.{{ github.run_number }}"
-        title: "Automated Build $v-1.0.{{ github.run_number }}"
+        automatic_release_tag: "v-1.0.${{ github.run_number }}"
+        title: "Automated Build v-1.0.${{ github.run_number }}"
         prerelease: true
         files: staging/*.jar
