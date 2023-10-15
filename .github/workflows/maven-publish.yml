@@ -23,7 +23,7 @@ jobs:
         distribution: 'temurin'
         cache: 'maven'
     - run: mvn clean compile assembly:single
-    - run: mkdir staging && mv target/lentil-1.0-SNAPSHOT-jar-with-dependencies.jar target/lentil-1.0-${{ env.build-number }}.jar && cp target/*.jar staging
+    - run: mkdir staging && mv target/lentil-1.0-SNAPSHOT-jar-with-dependencies.jar target/lentil-1.0.jar && cp target/*.jar staging
     - uses: actions/upload-artifact@v3
       with:
         name: Package
