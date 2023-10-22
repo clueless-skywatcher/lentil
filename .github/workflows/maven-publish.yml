@@ -5,7 +5,7 @@ name: Lentil Jar
 on:
   push:
     branches:
-      - main
+      - release/*
       
 jobs:
   build:
