@@ -19,8 +19,7 @@ Lentil is a new experimental static code analyzer for Java.
   ```
 
   If you already have the `analyzer-config.json` file in your current directory, you can skip adding the `-c` (also called `--config`) option. An output should look something like this:
-
-  ```
+ ```
   9 issues found
   Line 11: Annotation @Deprecated present on the same line as declaration abcd
   Line 15: Annotation @Nullable present on the same line as declaration abc

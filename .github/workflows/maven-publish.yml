@@ -1,0 +1,38 @@
+# This workflow will build a package using Maven and then publish it to GitHub packages when a release is created
+# For more information see: https://github.com/actions/setup-java/blob/main/docs/advanced-usage.md#apache-maven-with-a-settings-path
+
+name: Lentil Jar
+on:
+  push:
+    branches:
+      - release/*
+      
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+    - uses: actions/checkout@v3
+    - uses: actions/setup-java@v3
+      with:
+        java-version: '21'
+        distribution: 'temurin'
+        cache: 'maven'
+    - run: mvn clean compile assembly:single
+    - run: mkdir staging && mv target/lentil-1.0-SNAPSHOT-jar-with-dependencies.jar target/lentil-1.0.jar && cp target/*.jar staging
+    - uses: actions/upload-artifact@v3
+      with:
+        name: Package
+        path: staging
+        retention-days: 1
+    - uses: marvinpinto/action-automatic-releases@latest
+      with:
+        repo_token: "${{ secrets.LENTIL_REPO_TOKEN }}"
+        automatic_release_tag: "v-1.0.${{ github.run_number }}"
+        title: "Automated Build v-1.0.${{ github.run_number }}"
+        prerelease: true
+        files: staging/*.jar
