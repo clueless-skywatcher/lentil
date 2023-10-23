@@ -1,9 +1,0 @@
-{
-    "analyzer": {
-        "checks": [
-            {
-                "name": "AnnotationsOnSameLine"
-            }
-        ]
-    }
-}
