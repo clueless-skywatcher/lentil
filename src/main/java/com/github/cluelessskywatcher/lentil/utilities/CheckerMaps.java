@@ -10,6 +10,9 @@ public class CheckerMaps {
         // Annotation checks
         CHECKERS_FROM_CODE.put("A0001", "com.github.cluelessskywatcher.lentil.checks.annotations.AnnotationsOnSameLineChecker");
 
+        // Bad practice checks
+        CHECKERS_FROM_CODE.put("BP0001", "com.github.cluelessskywatcher.lentil.checks.badpractice.BooleanReturnsNullChecker");
+
         // Code checks
         CHECKERS_FROM_CODE.put("C0001", "com.github.cluelessskywatcher.lentil.checks.code.LineLengthChecker");
 
@@ -25,6 +28,9 @@ public class CheckerMaps {
         // Annotation checks
         CHECKERS_FROM_NAME.put("AnnotationsOnSameLine", "com.github.cluelessskywatcher.lentil.checks.annotations.AnnotationsOnSameLineChecker");
 
+        // Bad practice checks
+        CHECKERS_FROM_NAME.put("BooleanReturnsNull", "com.github.cluelessskywatcher.lentil.checks.badpractice.BooleanReturnsNullChecker");
+        
         // Code checks
         CHECKERS_FROM_NAME.put("LineLength", "com.github.cluelessskywatcher.lentil.checks.code.LineLengthChecker");
 
