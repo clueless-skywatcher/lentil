@@ -9,8 +9,8 @@ import com.github.javaparser.ast.CompilationUnit;
 import com.github.javaparser.ast.body.MethodDeclaration;
 import com.github.javaparser.ast.stmt.ReturnStmt;
 
-public class BooleanReturnNullChecker extends AbstractChecker {
-    public BooleanReturnNullChecker() {
+public class BooleanReturnsNullChecker extends AbstractChecker {
+    public BooleanReturnsNullChecker() {
         issueCode = "BP0001";
         messageFormat = "{0}: Bad practice! Boolean method is returning null";
         description = "A method that should return a boolean is returning a null value. Null values can cause NullPointerException if not handled properly";
