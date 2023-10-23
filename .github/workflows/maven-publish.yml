@@ -32,7 +32,9 @@ jobs:
     - uses: marvinpinto/action-automatic-releases@latest
       with:
         repo_token: "${{ secrets.LENTIL_REPO_TOKEN }}"
-        automatic_release_tag: "v-1.0.${{ github.run_number }}"
-        title: "Automated Build v-1.0.${{ github.run_number }}"
+        automatic_release_tag: "v-${{steps.branchVersion.outputs.major}}.${{steps.branchVersion.outputs.minor}}.${{steps.branchVersion.outputs.patch}}"
+        title: "Automated Build v-${{steps.branchVersion.outputs.major}}.${{steps.branchVersion.outputs.minor}}.${{steps.branchVersion.outputs.patch}}"
         prerelease: true
         files: staging/*.jar
+    - uses: valadas/get-release-branch-version@v1
+      id: branchVersion
