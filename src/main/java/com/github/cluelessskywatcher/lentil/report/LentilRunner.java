@@ -34,7 +34,7 @@ public class LentilRunner {
     }
 
     public List<String> getReports() throws Exception {
-        for (Class checkerClass : config.getCheckerClasses()){
+        for (Class<?> checkerClass : config.getCheckerClasses()){
             AbstractChecker checker = (AbstractChecker) checkerClass.getDeclaredConstructor().newInstance();
             checker.check(compilationUnit);
             reports.addAll(checker.getReports());

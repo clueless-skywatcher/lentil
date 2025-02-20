@@ -3,7 +3,6 @@ package com.github.cluelessskywatcher.lentil;
 import java.text.MessageFormat;
 
 import com.github.cluelessskywatcher.lentil.report.LentilRunner;
-import com.github.cluelessskywatcher.lentil.utilities.ConfigJSONReader;
 
 public class LentilQuickRunner {
     /*
