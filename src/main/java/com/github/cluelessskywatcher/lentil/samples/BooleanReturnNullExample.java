@@ -20,6 +20,11 @@ public class BooleanReturnNullExample {
     }
 
     public boolean defg(){
+        int a;
+        int b;
+        if (a + b == a + b) {
+            return false;
+        }
         System.out.println("Okay");
         return true;
     }

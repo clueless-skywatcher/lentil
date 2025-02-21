@@ -21,7 +21,6 @@ public class ConstantNameChecker extends AbstractChecker {
 
     @Override
     public void check(CompilationUnit cu) {
-        // TODO Auto-generated method stub
         cu.findAll(FieldDeclaration.class).forEach(
             field -> {
                 if (field.isStatic()){

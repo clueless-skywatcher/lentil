@@ -15,6 +15,7 @@ public class CheckerMaps {
 
         // Code checks
         CHECKERS_FROM_CODE.put("C0001", "com.github.cluelessskywatcher.lentil.checks.code.LineLengthChecker");
+        CHECKERS_FROM_CODE.put("C0002", "com.github.cluelessskywatcher.lentil.checks.code.IdenticalExpressionComparisonChecker");
 
         // Import checks
         CHECKERS_FROM_CODE.put("I0001", "com.github.cluelessskywatcher.lentil.checks.imports.AsteriskImportChecker");
@@ -33,7 +34,7 @@ public class CheckerMaps {
         
         // Code checks
         CHECKERS_FROM_NAME.put("LineLength", "com.github.cluelessskywatcher.lentil.checks.code.LineLengthChecker");
-
+        CHECKERS_FROM_NAME.put("IdenticalExpressionComparison", "com.github.cluelessskywatcher.lentil.checks.code.IdenticalExpressionComparisonChecker");
         // Import checks
         CHECKERS_FROM_NAME.put("AsteriskImport", "com.github.cluelessskywatcher.lentil.checks.imports.AsteriskImportChecker");
 
