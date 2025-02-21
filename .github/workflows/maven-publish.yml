@@ -21,7 +21,7 @@ jobs:
         cache: 'maven'
     - run: mvn clean compile assembly:single
     - run: mkdir staging && mv target/lentil-1.0-SNAPSHOT-jar-with-dependencies.jar target/lentil-1.0.jar && cp target/*.jar staging
-    - uses: actions/upload-artifact@v3
+    - uses: actions/upload-artifact@v4
       with:
         name: Package
         path: staging
