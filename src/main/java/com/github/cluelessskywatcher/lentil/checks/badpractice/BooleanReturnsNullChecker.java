@@ -20,7 +20,7 @@ public class BooleanReturnsNullChecker extends AbstractChecker {
     public void check(CompilationUnit cu) {
         cu.findAll(MethodDeclaration.class).forEach(
             method -> {
-                if (method.getTypeAsString().equals("boolean") || method.getTypeAsString().equals("Boolean")){
+                if (method.getTypeAsString().equals("Boolean")){
                     method.findAll(ReturnStmt.class).forEach(
                         stmt -> {
                             if (stmt.getExpression().get().toString().equals("null")){
